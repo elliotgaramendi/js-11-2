@@ -1,0 +1,10 @@
+.body {
+  margin: 0;
+  font-family: monospace
+}
+
+.header {
+  background-color: #234b96;
+  color: #f1f5f8;
+  text-align: center;
+}
