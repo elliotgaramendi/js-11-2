@@ -1,14 +1,13 @@
-const header = document.getElementById('header');
-// header.textContent = '<h1>DOM</h1>';
-header.innerHTML = '<h1>DOM</h1>';
-// header.style.backgroundColor = '#234B96';
-// header.style.color = '#F1F5F8';
-header.classList.add('header');
-header.setAttribute('title', 'Header');
+const root = document.getElementById('root');
+console.log(root);
 
-const input = document.querySelector('input');
-console.log(input);
+// root.innerHTML = '<h2>Is the best language</h2>';
 
-setTimeout(() => {
-  input.setAttribute('placeholder', 'Find something');
-}, 1000);
+const newHeading = document.createElement('h2');
+// <h2></h2>
+newHeading.textContent = 'Is the best language';
+// <h2>Is the best language</h2>
+root.appendChild(newHeading);
+
+// document.querySelector('body').removeChild(document.querySelector('p'));
+document.querySelector('p').remove();
