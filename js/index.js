@@ -1,13 +1,16 @@
-const root = document.getElementById('root');
-console.log(root);
+const element = document.querySelector('h1');
 
-// root.innerHTML = '<h2>Is the best language</h2>';
+element.addEventListener('click', (e) => {
+  // Detener comportamiento predeterminado
+  e.preventDefault();
 
-const newHeading = document.createElement('h2');
-// <h2></h2>
-newHeading.textContent = 'Is the best language';
-// <h2>Is the best language</h2>
-root.appendChild(newHeading);
+  // Detener la propagación del evento
+  e.stopPropagation();
 
-// document.querySelector('body').removeChild(document.querySelector('p'));
-document.querySelector('p').remove();
+  // Información general
+  console.log(e.type); // 'click'
+  console.log(e.target); // elemento que originó el evento
+
+  // Posición del cursor (eventos de ratón)
+  console.log(e.clientX, e.clientY);
+});
