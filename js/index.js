@@ -1,16 +1,11 @@
-const element = document.querySelector('h1');
+const form = document.getElementById('form');
 
-element.addEventListener('click', (e) => {
-  // Detener comportamiento predeterminado
+form.addEventListener('submit', (e) => {
   e.preventDefault();
+  const input1 = +form['number1'].value;
+  const input2 = +form['number2'].value;
 
-  // Detener la propagación del evento
-  e.stopPropagation();
+  const result = input1 + input2;
 
-  // Información general
-  console.log(e.type); // 'click'
-  console.log(e.target); // elemento que originó el evento
-
-  // Posición del cursor (eventos de ratón)
-  console.log(e.clientX, e.clientY);
+  document.getElementById('result').innerHTML = result;
 });
